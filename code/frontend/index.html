@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>可视化校园自习室预约系统</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main id="loginView" class="login-shell">
+      <section class="login-panel">
+        <p class="eyebrow">Campus Study Room</p>
+        <h1>可视化校园自习室预约系统</h1>
+        <p class="muted">在线查座、预约、签到、暂离与后台统计的一体化演示系统。</p>
+        <form id="loginForm" class="login-form">
+          <label>
+            账号
+            <input id="accountInput" name="account" value="20230001" autocomplete="username" required />
+          </label>
+          <label>
+            密码
+            <input id="passwordInput" name="password" value="123456" type="password" autocomplete="current-password" required />
+          </label>
+          <button type="submit">登录系统</button>
+        </form>
+        <div class="demo-accounts">
+          <button data-account="20230001" data-password="123456">学生账号</button>
+          <button data-account="admin" data-password="admin123">管理员账号</button>
+          <button data-account="super" data-password="super123">超级管理员</button>
+        </div>
+      </section>
+    </main>
+
+    <main id="appView" class="app-shell hidden">
+      <aside class="sidebar">
+        <div class="brand">
+          <span class="brand-mark">自</span>
+          <div>
+            <strong>自习室预约</strong>
+            <small>Study Room</small>
+          </div>
+        </div>
+        <nav class="nav">
+          <button class="active" data-tab="reserve">座位预约</button>
+          <button data-tab="bookings">我的预约</button>
+          <button data-tab="messages">消息通知</button>
+          <button data-tab="admin" class="admin-only hidden">后台管理</button>
+        </nav>
+        <div class="user-card">
+          <strong id="userName">未登录</strong>
+          <span id="userRole">-</span>
+          <button id="logoutBtn" class="ghost">退出登录</button>
+        </div>
+      </aside>
+
+      <section class="content">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Dashboard</p>
+            <h2 id="pageTitle">座位预约</h2>
+          </div>
+          <div id="toast" class="toast hidden"></div>
+        </header>
+
+        <section id="reserveTab" class="tab-panel">
+          <div class="toolbar">
+            <label>
+              日期
+              <input id="dateInput" type="date" />
+            </label>
+            <label>
+              开始
+              <input id="startInput" type="time" value="09:00" />
+            </label>
+            <label>
+              结束
+              <input id="endInput" type="time" value="11:00" />
+            </label>
+            <label>
+              楼宇
+              <select id="buildingSelect"></select>
+            </label>
+            <button id="searchRoomsBtn">查询座位</button>
+          </div>
+
+          <div class="layout-grid">
+            <section>
+              <div class="section-head">
+                <h3>自习室列表</h3>
+                <span id="roomSummary" class="pill">0 间</span>
+              </div>
+              <div id="roomList" class="room-list"></div>
+            </section>
+
+            <section>
+              <div class="section-head">
+                <h3 id="seatMapTitle">座位图</h3>
+                <span id="selectedSeatLabel" class="pill">未选择座位</span>
+              </div>
+              <div class="legend">
+                <span><i class="status-free"></i>空闲</span>
+                <span><i class="status-reserved"></i>已预约</span>
+                <span><i class="status-in-use"></i>使用中</span>
+                <span><i class="status-temp-leave"></i>暂离</span>
+                <span><i class="status-maintenance"></i>维修/禁用</span>
+              </div>
+              <div id="seatMap" class="seat-map empty">请选择房间查看座位</div>
+              <div class="confirm-bar">
+                <div>
+                  <strong id="bookingPreview">请选择一个空闲座位</strong>
+                  <span>提交后需在预约开始后按时签到。</span>
+                </div>
+                <button id="createBookingBtn" disabled>确认预约</button>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section id="bookingsTab" class="tab-panel hidden">
+          <div class="section-head">
+            <h3>预约记录</h3>
+            <button id="refreshBookingsBtn">刷新</button>
+          </div>
+          <div id="bookingList" class="booking-list"></div>
+        </section>
+
+        <section id="messagesTab" class="tab-panel hidden">
+          <div class="section-head">
+            <h3>消息通知</h3>
+            <button id="refreshMessagesBtn">刷新</button>
+          </div>
+          <div id="messageList" class="message-list"></div>
+        </section>
+
+        <section id="adminTab" class="tab-panel hidden">
+          <div class="admin-grid">
+            <section>
+              <div class="section-head">
+                <h3>资源与座位维护</h3>
+                <button id="refreshResourcesBtn">刷新</button>
+              </div>
+              <div id="adminSeatList" class="admin-seat-list"></div>
+            </section>
+
+            <section>
+              <div class="section-head">
+                <h3>预约规则</h3>
+              </div>
+              <form id="ruleForm" class="rule-form">
+                <label>提前预约天数<input name="advanceDays" type="number" min="1" /></label>
+                <label>最长预约小时<input name="maxDurationHours" type="number" min="1" /></label>
+                <label>签到宽限分钟<input name="graceMinutes" type="number" min="1" /></label>
+                <label>每日预约上限<input name="dailyLimit" type="number" min="1" /></label>
+                <label>暂离分钟<input name="tempLeaveMinutes" type="number" min="1" /></label>
+                <label>违约阈值<input name="violationThreshold" type="number" min="1" /></label>
+                <button type="submit">保存规则</button>
+              </form>
+            </section>
+          </div>
+
+          <section class="stats-panel">
+            <div class="section-head">
+              <h3>统计看板</h3>
+              <button id="refreshStatsBtn">刷新统计</button>
+            </div>
+            <div id="statsCards" class="stats-cards"></div>
+            <div id="roomStats" class="room-stats"></div>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
