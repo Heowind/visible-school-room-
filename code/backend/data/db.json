@@ -1,0 +1,2409 @@
+{
+  "meta": {
+    "nextIds": {
+      "booking": 11,
+      "violation": 1,
+      "notice": 11,
+      "audit": 53,
+      "statusLog": 1
+    },
+    "createdAt": "2026-06-25T13:54:38.425Z"
+  },
+  "users": [
+    {
+      "id": 1,
+      "accountNo": "20230001",
+      "password": "123456",
+      "name": "李同学",
+      "college": "计算机学院",
+      "role": "STUDENT",
+      "status": "NORMAL"
+    },
+    {
+      "id": 2,
+      "accountNo": "20230002",
+      "password": "123456",
+      "name": "王同学",
+      "college": "外国语学院",
+      "role": "STUDENT",
+      "status": "NORMAL"
+    },
+    {
+      "id": 3,
+      "accountNo": "admin",
+      "password": "admin123",
+      "name": "楼宇管理员",
+      "college": "图书馆",
+      "role": "ADMIN",
+      "status": "NORMAL",
+      "scopeRoomIds": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": 4,
+      "accountNo": "super",
+      "password": "super123",
+      "name": "超级管理员",
+      "college": "信息中心",
+      "role": "SUPER_ADMIN",
+      "status": "NORMAL"
+    }
+  ],
+  "sessions": [
+    {
+      "token": "8937b75cb895fde603dfdb38c781554a3d3a46998cc28c8b",
+      "userId": 4,
+      "createdAt": "2026-06-25T14:46:57.601Z"
+    }
+  ],
+  "campuses": [
+    {
+      "id": 1,
+      "name": "主校区",
+      "address": "校园东区",
+      "status": "OPEN"
+    }
+  ],
+  "buildings": [
+    {
+      "id": 1,
+      "campusId": 1,
+      "name": "图书馆",
+      "location": "中心广场",
+      "status": "OPEN"
+    },
+    {
+      "id": 2,
+      "campusId": 1,
+      "name": "第二教学楼",
+      "location": "教学区",
+      "status": "OPEN"
+    }
+  ],
+  "rooms": [
+    {
+      "id": 1,
+      "buildingId": 1,
+      "floorNo": "2F",
+      "name": "静思自习室 A201",
+      "capacity": 24,
+      "openStatus": "OPEN"
+    },
+    {
+      "id": 2,
+      "buildingId": 1,
+      "floorNo": "3F",
+      "name": "研学自习室 A305",
+      "capacity": 30,
+      "openStatus": "OPEN"
+    },
+    {
+      "id": 3,
+      "buildingId": 2,
+      "floorNo": "1F",
+      "name": "公共自习室 B110",
+      "capacity": 20,
+      "openStatus": "OPEN"
+    }
+  ],
+  "openPeriods": [
+    {
+      "id": 1,
+      "roomId": 1,
+      "weekday": "*",
+      "startTime": "08:00",
+      "endTime": "22:30",
+      "status": "OPEN"
+    },
+    {
+      "id": 2,
+      "roomId": 2,
+      "weekday": "*",
+      "startTime": "08:30",
+      "endTime": "22:00",
+      "status": "OPEN"
+    },
+    {
+      "id": 3,
+      "roomId": 3,
+      "weekday": "*",
+      "startTime": "07:30",
+      "endTime": "21:30",
+      "status": "OPEN"
+    }
+  ],
+  "seats": [
+    {
+      "id": 1,
+      "roomId": 1,
+      "seatNo": "A1-01",
+      "posX": 1,
+      "posY": 1,
+      "hasPower": false,
+      "status": "MAINTENANCE",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T14:44:04.321Z"
+    },
+    {
+      "id": 2,
+      "roomId": 1,
+      "seatNo": "A1-02",
+      "posX": 2,
+      "posY": 1,
+      "hasPower": true,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 3,
+      "roomId": 1,
+      "seatNo": "A1-03",
+      "posX": 3,
+      "posY": 1,
+      "hasPower": false,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 4,
+      "roomId": 1,
+      "seatNo": "A1-04",
+      "posX": 4,
+      "posY": 1,
+      "hasPower": true,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 5,
+      "roomId": 1,
+      "seatNo": "A1-05",
+      "posX": 5,
+      "posY": 1,
+      "hasPower": false,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 6,
+      "roomId": 1,
+      "seatNo": "A1-06",
+      "posX": 6,
+      "posY": 1,
+      "hasPower": true,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 7,
+      "roomId": 1,
+      "seatNo": "A2-01",
+      "posX": 1,
+      "posY": 2,
+      "hasPower": false,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 8,
+      "roomId": 1,
+      "seatNo": "A2-02",
+      "posX": 2,
+      "posY": 2,
+      "hasPower": true,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T14:46:50.064Z"
+    },
+    {
+      "id": 9,
+      "roomId": 1,
+      "seatNo": "A2-03",
+      "posX": 3,
+      "posY": 2,
+      "hasPower": false,
+      "status": "MAINTENANCE",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T14:46:49.716Z"
+    },
+    {
+      "id": 10,
+      "roomId": 1,
+      "seatNo": "A2-04",
+      "posX": 4,
+      "posY": 2,
+      "hasPower": true,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 11,
+      "roomId": 1,
+      "seatNo": "A2-05",
+      "posX": 5,
+      "posY": 2,
+      "hasPower": false,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 12,
+      "roomId": 1,
+      "seatNo": "A2-06",
+      "posX": 6,
+      "posY": 2,
+      "hasPower": true,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 13,
+      "roomId": 1,
+      "seatNo": "A3-01",
+      "posX": 1,
+      "posY": 3,
+      "hasPower": false,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 14,
+      "roomId": 1,
+      "seatNo": "A3-02",
+      "posX": 2,
+      "posY": 3,
+      "hasPower": true,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 15,
+      "roomId": 1,
+      "seatNo": "A3-03",
+      "posX": 3,
+      "posY": 3,
+      "hasPower": false,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 16,
+      "roomId": 1,
+      "seatNo": "A3-04",
+      "posX": 4,
+      "posY": 3,
+      "hasPower": true,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 17,
+      "roomId": 1,
+      "seatNo": "A3-05",
+      "posX": 5,
+      "posY": 3,
+      "hasPower": false,
+      "status": "DISABLED",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T14:01:01.517Z"
+    },
+    {
+      "id": 18,
+      "roomId": 1,
+      "seatNo": "A3-06",
+      "posX": 6,
+      "posY": 3,
+      "hasPower": true,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 19,
+      "roomId": 1,
+      "seatNo": "A4-01",
+      "posX": 1,
+      "posY": 4,
+      "hasPower": false,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 20,
+      "roomId": 1,
+      "seatNo": "A4-02",
+      "posX": 2,
+      "posY": 4,
+      "hasPower": true,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 21,
+      "roomId": 1,
+      "seatNo": "A4-03",
+      "posX": 3,
+      "posY": 4,
+      "hasPower": false,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 22,
+      "roomId": 1,
+      "seatNo": "A4-04",
+      "posX": 4,
+      "posY": 4,
+      "hasPower": true,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 23,
+      "roomId": 1,
+      "seatNo": "A4-05",
+      "posX": 5,
+      "posY": 4,
+      "hasPower": false,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 24,
+      "roomId": 1,
+      "seatNo": "A4-06",
+      "posX": 6,
+      "posY": 4,
+      "hasPower": true,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 25,
+      "roomId": 2,
+      "seatNo": "B1-01",
+      "posX": 1,
+      "posY": 1,
+      "hasPower": false,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 26,
+      "roomId": 2,
+      "seatNo": "B1-02",
+      "posX": 2,
+      "posY": 1,
+      "hasPower": true,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 27,
+      "roomId": 2,
+      "seatNo": "B1-03",
+      "posX": 3,
+      "posY": 1,
+      "hasPower": false,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 28,
+      "roomId": 2,
+      "seatNo": "B1-04",
+      "posX": 4,
+      "posY": 1,
+      "hasPower": true,
+      "status": "MAINTENANCE",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:56:04.332Z"
+    },
+    {
+      "id": 29,
+      "roomId": 2,
+      "seatNo": "B1-05",
+      "posX": 5,
+      "posY": 1,
+      "hasPower": false,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 30,
+      "roomId": 2,
+      "seatNo": "B1-06",
+      "posX": 6,
+      "posY": 1,
+      "hasPower": true,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 31,
+      "roomId": 2,
+      "seatNo": "B2-01",
+      "posX": 1,
+      "posY": 2,
+      "hasPower": false,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 32,
+      "roomId": 2,
+      "seatNo": "B2-02",
+      "posX": 2,
+      "posY": 2,
+      "hasPower": true,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 33,
+      "roomId": 2,
+      "seatNo": "B2-03",
+      "posX": 3,
+      "posY": 2,
+      "hasPower": false,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 34,
+      "roomId": 2,
+      "seatNo": "B2-04",
+      "posX": 4,
+      "posY": 2,
+      "hasPower": true,
+      "status": "MAINTENANCE",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 35,
+      "roomId": 2,
+      "seatNo": "B2-05",
+      "posX": 5,
+      "posY": 2,
+      "hasPower": false,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 36,
+      "roomId": 2,
+      "seatNo": "B2-06",
+      "posX": 6,
+      "posY": 2,
+      "hasPower": true,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 37,
+      "roomId": 2,
+      "seatNo": "B3-01",
+      "posX": 1,
+      "posY": 3,
+      "hasPower": false,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 38,
+      "roomId": 2,
+      "seatNo": "B3-02",
+      "posX": 2,
+      "posY": 3,
+      "hasPower": true,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 39,
+      "roomId": 2,
+      "seatNo": "B3-03",
+      "posX": 3,
+      "posY": 3,
+      "hasPower": false,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 40,
+      "roomId": 2,
+      "seatNo": "B3-04",
+      "posX": 4,
+      "posY": 3,
+      "hasPower": true,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 41,
+      "roomId": 2,
+      "seatNo": "B3-05",
+      "posX": 5,
+      "posY": 3,
+      "hasPower": false,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 42,
+      "roomId": 2,
+      "seatNo": "B3-06",
+      "posX": 6,
+      "posY": 3,
+      "hasPower": true,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 43,
+      "roomId": 2,
+      "seatNo": "B4-01",
+      "posX": 1,
+      "posY": 4,
+      "hasPower": false,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 44,
+      "roomId": 2,
+      "seatNo": "B4-02",
+      "posX": 2,
+      "posY": 4,
+      "hasPower": true,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 45,
+      "roomId": 2,
+      "seatNo": "B4-03",
+      "posX": 3,
+      "posY": 4,
+      "hasPower": false,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 46,
+      "roomId": 2,
+      "seatNo": "B4-04",
+      "posX": 4,
+      "posY": 4,
+      "hasPower": true,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 47,
+      "roomId": 2,
+      "seatNo": "B4-05",
+      "posX": 5,
+      "posY": 4,
+      "hasPower": false,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 48,
+      "roomId": 2,
+      "seatNo": "B4-06",
+      "posX": 6,
+      "posY": 4,
+      "hasPower": true,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 49,
+      "roomId": 2,
+      "seatNo": "B5-01",
+      "posX": 1,
+      "posY": 5,
+      "hasPower": false,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 50,
+      "roomId": 2,
+      "seatNo": "B5-02",
+      "posX": 2,
+      "posY": 5,
+      "hasPower": true,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 51,
+      "roomId": 2,
+      "seatNo": "B5-03",
+      "posX": 3,
+      "posY": 5,
+      "hasPower": false,
+      "status": "MAINTENANCE",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 52,
+      "roomId": 2,
+      "seatNo": "B5-04",
+      "posX": 4,
+      "posY": 5,
+      "hasPower": true,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 53,
+      "roomId": 2,
+      "seatNo": "B5-05",
+      "posX": 5,
+      "posY": 5,
+      "hasPower": false,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 54,
+      "roomId": 2,
+      "seatNo": "B5-06",
+      "posX": 6,
+      "posY": 5,
+      "hasPower": true,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 55,
+      "roomId": 3,
+      "seatNo": "C1-01",
+      "posX": 1,
+      "posY": 1,
+      "hasPower": false,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 56,
+      "roomId": 3,
+      "seatNo": "C1-02",
+      "posX": 2,
+      "posY": 1,
+      "hasPower": true,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 57,
+      "roomId": 3,
+      "seatNo": "C1-03",
+      "posX": 3,
+      "posY": 1,
+      "hasPower": false,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 58,
+      "roomId": 3,
+      "seatNo": "C1-04",
+      "posX": 4,
+      "posY": 1,
+      "hasPower": true,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 59,
+      "roomId": 3,
+      "seatNo": "C1-05",
+      "posX": 5,
+      "posY": 1,
+      "hasPower": false,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 60,
+      "roomId": 3,
+      "seatNo": "C2-01",
+      "posX": 1,
+      "posY": 2,
+      "hasPower": false,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 61,
+      "roomId": 3,
+      "seatNo": "C2-02",
+      "posX": 2,
+      "posY": 2,
+      "hasPower": true,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 62,
+      "roomId": 3,
+      "seatNo": "C2-03",
+      "posX": 3,
+      "posY": 2,
+      "hasPower": false,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 63,
+      "roomId": 3,
+      "seatNo": "C2-04",
+      "posX": 4,
+      "posY": 2,
+      "hasPower": true,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 64,
+      "roomId": 3,
+      "seatNo": "C2-05",
+      "posX": 5,
+      "posY": 2,
+      "hasPower": false,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 65,
+      "roomId": 3,
+      "seatNo": "C3-01",
+      "posX": 1,
+      "posY": 3,
+      "hasPower": false,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 66,
+      "roomId": 3,
+      "seatNo": "C3-02",
+      "posX": 2,
+      "posY": 3,
+      "hasPower": true,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 67,
+      "roomId": 3,
+      "seatNo": "C3-03",
+      "posX": 3,
+      "posY": 3,
+      "hasPower": false,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 68,
+      "roomId": 3,
+      "seatNo": "C3-04",
+      "posX": 4,
+      "posY": 3,
+      "hasPower": true,
+      "status": "MAINTENANCE",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 69,
+      "roomId": 3,
+      "seatNo": "C3-05",
+      "posX": 5,
+      "posY": 3,
+      "hasPower": false,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 70,
+      "roomId": 3,
+      "seatNo": "C4-01",
+      "posX": 1,
+      "posY": 4,
+      "hasPower": false,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 71,
+      "roomId": 3,
+      "seatNo": "C4-02",
+      "posX": 2,
+      "posY": 4,
+      "hasPower": true,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 72,
+      "roomId": 3,
+      "seatNo": "C4-03",
+      "posX": 3,
+      "posY": 4,
+      "hasPower": false,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 73,
+      "roomId": 3,
+      "seatNo": "C4-04",
+      "posX": 4,
+      "posY": 4,
+      "hasPower": true,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    },
+    {
+      "id": 74,
+      "roomId": 3,
+      "seatNo": "C4-05",
+      "posX": 5,
+      "posY": 4,
+      "hasPower": false,
+      "status": "NORMAL",
+      "createdAt": "2026-06-25T13:54:38.425Z",
+      "updatedAt": "2026-06-25T13:54:38.425Z"
+    }
+  ],
+  "bookings": [
+    {
+      "id": 1,
+      "userId": 1,
+      "seatId": 2,
+      "startAt": "2026-06-26T01:00:00.000Z",
+      "endAt": "2026-06-26T03:00:00.000Z",
+      "status": "CANCELLED",
+      "cancelReason": "用户主动取消",
+      "createdAt": "2026-06-25T13:54:59.060Z",
+      "updatedAt": "2026-06-25T13:55:14.115Z"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "seatId": 4,
+      "startAt": "2026-06-26T01:00:00.000Z",
+      "endAt": "2026-06-26T03:00:00.000Z",
+      "status": "COMPLETED",
+      "cancelReason": "",
+      "createdAt": "2026-06-25T13:55:19.463Z",
+      "updatedAt": "2026-06-25T14:43:44.946Z",
+      "leaveStartedAt": "2026-06-25T14:43:44.546Z"
+    },
+    {
+      "id": 3,
+      "userId": 3,
+      "seatId": 32,
+      "startAt": "2026-06-30T01:00:00.000Z",
+      "endAt": "2026-06-30T03:00:00.000Z",
+      "status": "COMPLETED",
+      "cancelReason": "",
+      "createdAt": "2026-06-25T13:55:45.354Z",
+      "updatedAt": "2026-06-25T14:44:01.314Z",
+      "leaveStartedAt": "2026-06-25T14:44:00.897Z"
+    },
+    {
+      "id": 4,
+      "userId": 4,
+      "seatId": 2,
+      "startAt": "2026-06-27T01:00:00.000Z",
+      "endAt": "2026-06-27T03:00:00.000Z",
+      "status": "COMPLETED",
+      "cancelReason": "",
+      "createdAt": "2026-06-25T14:03:53.078Z",
+      "updatedAt": "2026-06-25T14:04:00.835Z",
+      "leaveStartedAt": "2026-06-25T14:03:58.459Z"
+    },
+    {
+      "id": 5,
+      "userId": 4,
+      "seatId": 9,
+      "startAt": "2026-06-27T01:00:00.000Z",
+      "endAt": "2026-06-27T03:00:00.000Z",
+      "status": "COMPLETED",
+      "cancelReason": "",
+      "createdAt": "2026-06-25T14:04:04.693Z",
+      "updatedAt": "2026-06-25T14:04:11.064Z"
+    },
+    {
+      "id": 6,
+      "userId": 1,
+      "seatId": 15,
+      "startAt": "2026-06-27T01:00:00.000Z",
+      "endAt": "2026-06-27T03:00:00.000Z",
+      "status": "COMPLETED",
+      "cancelReason": "",
+      "createdAt": "2026-06-25T14:06:01.573Z",
+      "updatedAt": "2026-06-25T14:43:44.041Z",
+      "leaveStartedAt": "2026-06-25T14:43:43.651Z"
+    },
+    {
+      "id": 7,
+      "userId": 4,
+      "seatId": 2,
+      "startAt": "2026-06-26T01:00:00.000Z",
+      "endAt": "2026-06-26T03:00:00.000Z",
+      "status": "COMPLETED",
+      "cancelReason": "",
+      "createdAt": "2026-06-25T14:44:23.650Z",
+      "updatedAt": "2026-06-25T14:44:29.616Z",
+      "leaveStartedAt": "2026-06-25T14:44:29.173Z"
+    },
+    {
+      "id": 8,
+      "userId": 1,
+      "seatId": 2,
+      "startAt": "2026-06-26T01:00:00.000Z",
+      "endAt": "2026-06-26T03:00:00.000Z",
+      "status": "COMPLETED",
+      "cancelReason": "",
+      "createdAt": "2026-06-25T14:46:04.375Z",
+      "updatedAt": "2026-06-25T14:46:11.214Z",
+      "leaveStartedAt": "2026-06-25T14:46:07.734Z"
+    },
+    {
+      "id": 9,
+      "userId": 1,
+      "seatId": 8,
+      "startAt": "2026-06-27T01:00:00.000Z",
+      "endAt": "2026-06-27T03:00:00.000Z",
+      "status": "PENDING_CHECKIN",
+      "cancelReason": "",
+      "createdAt": "2026-06-25T14:46:20.704Z",
+      "updatedAt": "2026-06-25T14:46:20.704Z"
+    },
+    {
+      "id": 10,
+      "userId": 2,
+      "seatId": 9,
+      "startAt": "2026-06-27T01:00:00.000Z",
+      "endAt": "2026-06-27T03:00:00.000Z",
+      "status": "PENDING_CHECKIN",
+      "cancelReason": "",
+      "createdAt": "2026-06-25T14:46:30.362Z",
+      "updatedAt": "2026-06-25T14:46:30.362Z"
+    }
+  ],
+  "checkins": [
+    {
+      "id": 1,
+      "bookingId": 4,
+      "userId": 4,
+      "checkinTime": "2026-06-25T14:03:56.627Z",
+      "method": "QR_CODE",
+      "result": "SUCCESS"
+    },
+    {
+      "id": 2,
+      "bookingId": 5,
+      "userId": 4,
+      "checkinTime": "2026-06-25T14:04:09.080Z",
+      "method": "QR_CODE",
+      "result": "SUCCESS"
+    },
+    {
+      "id": 3,
+      "bookingId": 2,
+      "userId": 1,
+      "checkinTime": "2026-06-25T14:06:08.128Z",
+      "method": "QR_CODE",
+      "result": "SUCCESS"
+    },
+    {
+      "id": 4,
+      "bookingId": 6,
+      "userId": 1,
+      "checkinTime": "2026-06-25T14:43:41.770Z",
+      "method": "QR_CODE",
+      "result": "SUCCESS"
+    },
+    {
+      "id": 5,
+      "bookingId": 3,
+      "userId": 3,
+      "checkinTime": "2026-06-25T14:44:00.567Z",
+      "method": "QR_CODE",
+      "result": "SUCCESS"
+    },
+    {
+      "id": 6,
+      "bookingId": 7,
+      "userId": 4,
+      "checkinTime": "2026-06-25T14:44:28.827Z",
+      "method": "QR_CODE",
+      "result": "SUCCESS"
+    },
+    {
+      "id": 7,
+      "bookingId": 8,
+      "userId": 1,
+      "checkinTime": "2026-06-25T14:46:06.876Z",
+      "method": "QR_CODE",
+      "result": "SUCCESS"
+    }
+  ],
+  "violations": [],
+  "notices": [
+    {
+      "id": 1,
+      "userId": 1,
+      "type": "BOOKING_SUCCESS",
+      "title": "预约成功",
+      "content": "请在预约开始后按时到场扫码签到。",
+      "readStatus": "UNREAD",
+      "createdAt": "2026-06-25T13:54:59.060Z"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "type": "BOOKING_SUCCESS",
+      "title": "预约成功",
+      "content": "请在预约开始后按时到场扫码签到。",
+      "readStatus": "UNREAD",
+      "createdAt": "2026-06-25T13:55:19.463Z"
+    },
+    {
+      "id": 3,
+      "userId": 3,
+      "type": "BOOKING_SUCCESS",
+      "title": "预约成功",
+      "content": "请在预约开始后按时到场扫码签到。",
+      "readStatus": "UNREAD",
+      "createdAt": "2026-06-25T13:55:45.354Z"
+    },
+    {
+      "id": 4,
+      "userId": 4,
+      "type": "BOOKING_SUCCESS",
+      "title": "预约成功",
+      "content": "请在预约开始后按时到场扫码签到。",
+      "readStatus": "UNREAD",
+      "createdAt": "2026-06-25T14:03:53.079Z"
+    },
+    {
+      "id": 5,
+      "userId": 4,
+      "type": "BOOKING_SUCCESS",
+      "title": "预约成功",
+      "content": "请在预约开始后按时到场扫码签到。",
+      "readStatus": "UNREAD",
+      "createdAt": "2026-06-25T14:04:04.693Z"
+    },
+    {
+      "id": 6,
+      "userId": 1,
+      "type": "BOOKING_SUCCESS",
+      "title": "预约成功",
+      "content": "请在预约开始后按时到场扫码签到。",
+      "readStatus": "UNREAD",
+      "createdAt": "2026-06-25T14:06:01.573Z"
+    },
+    {
+      "id": 7,
+      "userId": 4,
+      "type": "BOOKING_SUCCESS",
+      "title": "预约成功",
+      "content": "请在预约开始后按时到场扫码签到。",
+      "readStatus": "UNREAD",
+      "createdAt": "2026-06-25T14:44:23.650Z"
+    },
+    {
+      "id": 8,
+      "userId": 1,
+      "type": "BOOKING_SUCCESS",
+      "title": "预约成功",
+      "content": "请在预约开始后按时到场扫码签到。",
+      "readStatus": "UNREAD",
+      "createdAt": "2026-06-25T14:46:04.375Z"
+    },
+    {
+      "id": 9,
+      "userId": 1,
+      "type": "BOOKING_SUCCESS",
+      "title": "预约成功",
+      "content": "请在预约开始后按时到场扫码签到。",
+      "readStatus": "UNREAD",
+      "createdAt": "2026-06-25T14:46:20.704Z"
+    },
+    {
+      "id": 10,
+      "userId": 2,
+      "type": "BOOKING_SUCCESS",
+      "title": "预约成功",
+      "content": "请在预约开始后按时到场扫码签到。",
+      "readStatus": "UNREAD",
+      "createdAt": "2026-06-25T14:46:30.362Z"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": 1,
+      "operatorId": 1,
+      "action": "LOGIN",
+      "targetType": "sys_user",
+      "targetId": 1,
+      "beforeValue": null,
+      "afterValue": "登录成功",
+      "createdAt": "2026-06-25T13:54:49.192Z"
+    },
+    {
+      "id": 2,
+      "operatorId": 1,
+      "action": "CREATE",
+      "targetType": "booking_order",
+      "targetId": 1,
+      "beforeValue": null,
+      "afterValue": {
+        "id": 1,
+        "userId": 1,
+        "seatId": 2,
+        "startAt": "2026-06-26T01:00:00.000Z",
+        "endAt": "2026-06-26T03:00:00.000Z",
+        "status": "PENDING_CHECKIN",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T13:54:59.060Z",
+        "updatedAt": "2026-06-25T13:54:59.060Z"
+      },
+      "createdAt": "2026-06-25T13:54:59.060Z"
+    },
+    {
+      "id": 3,
+      "operatorId": 1,
+      "action": "CANCEL",
+      "targetType": "booking_order",
+      "targetId": 1,
+      "beforeValue": {
+        "id": 1,
+        "userId": 1,
+        "seatId": 2,
+        "startAt": "2026-06-26T01:00:00.000Z",
+        "endAt": "2026-06-26T03:00:00.000Z",
+        "status": "PENDING_CHECKIN",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T13:54:59.060Z",
+        "updatedAt": "2026-06-25T13:54:59.060Z"
+      },
+      "afterValue": {
+        "id": 1,
+        "userId": 1,
+        "seatId": 2,
+        "startAt": "2026-06-26T01:00:00.000Z",
+        "endAt": "2026-06-26T03:00:00.000Z",
+        "status": "CANCELLED",
+        "cancelReason": "用户主动取消",
+        "createdAt": "2026-06-25T13:54:59.060Z",
+        "updatedAt": "2026-06-25T13:55:14.115Z"
+      },
+      "createdAt": "2026-06-25T13:55:14.115Z"
+    },
+    {
+      "id": 4,
+      "operatorId": 1,
+      "action": "CREATE",
+      "targetType": "booking_order",
+      "targetId": 2,
+      "beforeValue": null,
+      "afterValue": {
+        "id": 2,
+        "userId": 1,
+        "seatId": 4,
+        "startAt": "2026-06-26T01:00:00.000Z",
+        "endAt": "2026-06-26T03:00:00.000Z",
+        "status": "PENDING_CHECKIN",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T13:55:19.463Z",
+        "updatedAt": "2026-06-25T13:55:19.463Z"
+      },
+      "createdAt": "2026-06-25T13:55:19.463Z"
+    },
+    {
+      "id": 5,
+      "operatorId": 3,
+      "action": "LOGIN",
+      "targetType": "sys_user",
+      "targetId": 3,
+      "beforeValue": null,
+      "afterValue": "登录成功",
+      "createdAt": "2026-06-25T13:55:36.218Z"
+    },
+    {
+      "id": 6,
+      "operatorId": 3,
+      "action": "CREATE",
+      "targetType": "booking_order",
+      "targetId": 3,
+      "beforeValue": null,
+      "afterValue": {
+        "id": 3,
+        "userId": 3,
+        "seatId": 32,
+        "startAt": "2026-06-30T01:00:00.000Z",
+        "endAt": "2026-06-30T03:00:00.000Z",
+        "status": "PENDING_CHECKIN",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T13:55:45.354Z",
+        "updatedAt": "2026-06-25T13:55:45.354Z"
+      },
+      "createdAt": "2026-06-25T13:55:45.354Z"
+    },
+    {
+      "id": 7,
+      "operatorId": 3,
+      "action": "UPDATE",
+      "targetType": "space_seat",
+      "targetId": 28,
+      "beforeValue": {
+        "id": 28,
+        "roomId": 2,
+        "seatNo": "B1-04",
+        "posX": 4,
+        "posY": 1,
+        "hasPower": true,
+        "status": "NORMAL",
+        "createdAt": "2026-06-25T13:54:38.425Z",
+        "updatedAt": "2026-06-25T13:54:38.425Z"
+      },
+      "afterValue": {
+        "id": 28,
+        "roomId": 2,
+        "seatNo": "B1-04",
+        "posX": 4,
+        "posY": 1,
+        "hasPower": true,
+        "status": "MAINTENANCE",
+        "createdAt": "2026-06-25T13:54:38.425Z",
+        "updatedAt": "2026-06-25T13:56:04.332Z"
+      },
+      "createdAt": "2026-06-25T13:56:04.332Z"
+    },
+    {
+      "id": 8,
+      "operatorId": 4,
+      "action": "LOGIN",
+      "targetType": "sys_user",
+      "targetId": 4,
+      "beforeValue": null,
+      "afterValue": "登录成功",
+      "createdAt": "2026-06-25T14:00:54.948Z"
+    },
+    {
+      "id": 9,
+      "operatorId": 4,
+      "action": "UPDATE",
+      "targetType": "space_seat",
+      "targetId": 17,
+      "beforeValue": {
+        "id": 17,
+        "roomId": 1,
+        "seatNo": "A3-05",
+        "posX": 5,
+        "posY": 3,
+        "hasPower": false,
+        "status": "MAINTENANCE",
+        "createdAt": "2026-06-25T13:54:38.425Z",
+        "updatedAt": "2026-06-25T13:54:38.425Z"
+      },
+      "afterValue": {
+        "id": 17,
+        "roomId": 1,
+        "seatNo": "A3-05",
+        "posX": 5,
+        "posY": 3,
+        "hasPower": false,
+        "status": "DISABLED",
+        "createdAt": "2026-06-25T13:54:38.425Z",
+        "updatedAt": "2026-06-25T14:01:01.517Z"
+      },
+      "createdAt": "2026-06-25T14:01:01.517Z"
+    },
+    {
+      "id": 10,
+      "operatorId": 4,
+      "action": "CREATE",
+      "targetType": "booking_order",
+      "targetId": 4,
+      "beforeValue": null,
+      "afterValue": {
+        "id": 4,
+        "userId": 4,
+        "seatId": 2,
+        "startAt": "2026-06-27T01:00:00.000Z",
+        "endAt": "2026-06-27T03:00:00.000Z",
+        "status": "PENDING_CHECKIN",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T14:03:53.078Z",
+        "updatedAt": "2026-06-25T14:03:53.078Z"
+      },
+      "createdAt": "2026-06-25T14:03:53.079Z"
+    },
+    {
+      "id": 11,
+      "operatorId": 4,
+      "action": "CHECKIN",
+      "targetType": "booking_order",
+      "targetId": 4,
+      "beforeValue": {
+        "id": 4,
+        "userId": 4,
+        "seatId": 2,
+        "startAt": "2026-06-27T01:00:00.000Z",
+        "endAt": "2026-06-27T03:00:00.000Z",
+        "status": "PENDING_CHECKIN",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T14:03:53.078Z",
+        "updatedAt": "2026-06-25T14:03:53.078Z"
+      },
+      "afterValue": {
+        "id": 4,
+        "userId": 4,
+        "seatId": 2,
+        "startAt": "2026-06-27T01:00:00.000Z",
+        "endAt": "2026-06-27T03:00:00.000Z",
+        "status": "IN_USE",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T14:03:53.078Z",
+        "updatedAt": "2026-06-25T14:03:56.627Z"
+      },
+      "createdAt": "2026-06-25T14:03:56.627Z"
+    },
+    {
+      "id": 12,
+      "operatorId": 4,
+      "action": "TEMP_LEAVE",
+      "targetType": "booking_order",
+      "targetId": 4,
+      "beforeValue": {
+        "id": 4,
+        "userId": 4,
+        "seatId": 2,
+        "startAt": "2026-06-27T01:00:00.000Z",
+        "endAt": "2026-06-27T03:00:00.000Z",
+        "status": "IN_USE",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T14:03:53.078Z",
+        "updatedAt": "2026-06-25T14:03:56.627Z"
+      },
+      "afterValue": {
+        "id": 4,
+        "userId": 4,
+        "seatId": 2,
+        "startAt": "2026-06-27T01:00:00.000Z",
+        "endAt": "2026-06-27T03:00:00.000Z",
+        "status": "TEMP_LEAVE",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T14:03:53.078Z",
+        "updatedAt": "2026-06-25T14:03:58.459Z",
+        "leaveStartedAt": "2026-06-25T14:03:58.459Z"
+      },
+      "createdAt": "2026-06-25T14:03:58.459Z"
+    },
+    {
+      "id": 13,
+      "operatorId": 4,
+      "action": "FINISH",
+      "targetType": "booking_order",
+      "targetId": 4,
+      "beforeValue": {
+        "id": 4,
+        "userId": 4,
+        "seatId": 2,
+        "startAt": "2026-06-27T01:00:00.000Z",
+        "endAt": "2026-06-27T03:00:00.000Z",
+        "status": "TEMP_LEAVE",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T14:03:53.078Z",
+        "updatedAt": "2026-06-25T14:03:58.459Z",
+        "leaveStartedAt": "2026-06-25T14:03:58.459Z"
+      },
+      "afterValue": {
+        "id": 4,
+        "userId": 4,
+        "seatId": 2,
+        "startAt": "2026-06-27T01:00:00.000Z",
+        "endAt": "2026-06-27T03:00:00.000Z",
+        "status": "COMPLETED",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T14:03:53.078Z",
+        "updatedAt": "2026-06-25T14:04:00.835Z",
+        "leaveStartedAt": "2026-06-25T14:03:58.459Z"
+      },
+      "createdAt": "2026-06-25T14:04:00.835Z"
+    },
+    {
+      "id": 14,
+      "operatorId": 4,
+      "action": "CREATE",
+      "targetType": "booking_order",
+      "targetId": 5,
+      "beforeValue": null,
+      "afterValue": {
+        "id": 5,
+        "userId": 4,
+        "seatId": 9,
+        "startAt": "2026-06-27T01:00:00.000Z",
+        "endAt": "2026-06-27T03:00:00.000Z",
+        "status": "PENDING_CHECKIN",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T14:04:04.693Z",
+        "updatedAt": "2026-06-25T14:04:04.693Z"
+      },
+      "createdAt": "2026-06-25T14:04:04.693Z"
+    },
+    {
+      "id": 15,
+      "operatorId": 4,
+      "action": "CHECKIN",
+      "targetType": "booking_order",
+      "targetId": 5,
+      "beforeValue": {
+        "id": 5,
+        "userId": 4,
+        "seatId": 9,
+        "startAt": "2026-06-27T01:00:00.000Z",
+        "endAt": "2026-06-27T03:00:00.000Z",
+        "status": "PENDING_CHECKIN",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T14:04:04.693Z",
+        "updatedAt": "2026-06-25T14:04:04.693Z"
+      },
+      "afterValue": {
+        "id": 5,
+        "userId": 4,
+        "seatId": 9,
+        "startAt": "2026-06-27T01:00:00.000Z",
+        "endAt": "2026-06-27T03:00:00.000Z",
+        "status": "IN_USE",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T14:04:04.693Z",
+        "updatedAt": "2026-06-25T14:04:09.080Z"
+      },
+      "createdAt": "2026-06-25T14:04:09.080Z"
+    },
+    {
+      "id": 16,
+      "operatorId": 4,
+      "action": "FINISH",
+      "targetType": "booking_order",
+      "targetId": 5,
+      "beforeValue": {
+        "id": 5,
+        "userId": 4,
+        "seatId": 9,
+        "startAt": "2026-06-27T01:00:00.000Z",
+        "endAt": "2026-06-27T03:00:00.000Z",
+        "status": "IN_USE",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T14:04:04.693Z",
+        "updatedAt": "2026-06-25T14:04:09.080Z"
+      },
+      "afterValue": {
+        "id": 5,
+        "userId": 4,
+        "seatId": 9,
+        "startAt": "2026-06-27T01:00:00.000Z",
+        "endAt": "2026-06-27T03:00:00.000Z",
+        "status": "COMPLETED",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T14:04:04.693Z",
+        "updatedAt": "2026-06-25T14:04:11.064Z"
+      },
+      "createdAt": "2026-06-25T14:04:11.064Z"
+    },
+    {
+      "id": 17,
+      "operatorId": 1,
+      "action": "LOGIN",
+      "targetType": "sys_user",
+      "targetId": 1,
+      "beforeValue": null,
+      "afterValue": "登录成功",
+      "createdAt": "2026-06-25T14:05:56.585Z"
+    },
+    {
+      "id": 18,
+      "operatorId": 1,
+      "action": "CREATE",
+      "targetType": "booking_order",
+      "targetId": 6,
+      "beforeValue": null,
+      "afterValue": {
+        "id": 6,
+        "userId": 1,
+        "seatId": 15,
+        "startAt": "2026-06-27T01:00:00.000Z",
+        "endAt": "2026-06-27T03:00:00.000Z",
+        "status": "PENDING_CHECKIN",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T14:06:01.573Z",
+        "updatedAt": "2026-06-25T14:06:01.573Z"
+      },
+      "createdAt": "2026-06-25T14:06:01.573Z"
+    },
+    {
+      "id": 19,
+      "operatorId": 1,
+      "action": "CHECKIN",
+      "targetType": "booking_order",
+      "targetId": 2,
+      "beforeValue": {
+        "id": 2,
+        "userId": 1,
+        "seatId": 4,
+        "startAt": "2026-06-26T01:00:00.000Z",
+        "endAt": "2026-06-26T03:00:00.000Z",
+        "status": "PENDING_CHECKIN",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T13:55:19.463Z",
+        "updatedAt": "2026-06-25T13:55:19.463Z"
+      },
+      "afterValue": {
+        "id": 2,
+        "userId": 1,
+        "seatId": 4,
+        "startAt": "2026-06-26T01:00:00.000Z",
+        "endAt": "2026-06-26T03:00:00.000Z",
+        "status": "IN_USE",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T13:55:19.463Z",
+        "updatedAt": "2026-06-25T14:06:08.128Z"
+      },
+      "createdAt": "2026-06-25T14:06:08.128Z"
+    },
+    {
+      "id": 20,
+      "operatorId": 3,
+      "action": "LOGIN",
+      "targetType": "sys_user",
+      "targetId": 3,
+      "beforeValue": null,
+      "afterValue": "登录成功",
+      "createdAt": "2026-06-25T14:06:26.432Z"
+    },
+    {
+      "id": 21,
+      "operatorId": 4,
+      "action": "LOGIN",
+      "targetType": "sys_user",
+      "targetId": 4,
+      "beforeValue": null,
+      "afterValue": "登录成功",
+      "createdAt": "2026-06-25T14:06:36.594Z"
+    },
+    {
+      "id": 22,
+      "operatorId": 1,
+      "action": "LOGIN",
+      "targetType": "sys_user",
+      "targetId": 1,
+      "beforeValue": null,
+      "afterValue": "登录成功",
+      "createdAt": "2026-06-25T14:40:16.411Z"
+    },
+    {
+      "id": 23,
+      "operatorId": 1,
+      "action": "LOGIN",
+      "targetType": "sys_user",
+      "targetId": 1,
+      "beforeValue": null,
+      "afterValue": "登录成功",
+      "createdAt": "2026-06-25T14:41:37.961Z"
+    },
+    {
+      "id": 24,
+      "operatorId": 1,
+      "action": "LOGIN",
+      "targetType": "sys_user",
+      "targetId": 1,
+      "beforeValue": null,
+      "afterValue": "登录成功",
+      "createdAt": "2026-06-25T14:43:34.138Z"
+    },
+    {
+      "id": 25,
+      "operatorId": 1,
+      "action": "CHECKIN",
+      "targetType": "booking_order",
+      "targetId": 6,
+      "beforeValue": {
+        "id": 6,
+        "userId": 1,
+        "seatId": 15,
+        "startAt": "2026-06-27T01:00:00.000Z",
+        "endAt": "2026-06-27T03:00:00.000Z",
+        "status": "PENDING_CHECKIN",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T14:06:01.573Z",
+        "updatedAt": "2026-06-25T14:06:01.573Z"
+      },
+      "afterValue": {
+        "id": 6,
+        "userId": 1,
+        "seatId": 15,
+        "startAt": "2026-06-27T01:00:00.000Z",
+        "endAt": "2026-06-27T03:00:00.000Z",
+        "status": "IN_USE",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T14:06:01.573Z",
+        "updatedAt": "2026-06-25T14:43:41.770Z"
+      },
+      "createdAt": "2026-06-25T14:43:41.770Z"
+    },
+    {
+      "id": 26,
+      "operatorId": 1,
+      "action": "TEMP_LEAVE",
+      "targetType": "booking_order",
+      "targetId": 6,
+      "beforeValue": {
+        "id": 6,
+        "userId": 1,
+        "seatId": 15,
+        "startAt": "2026-06-27T01:00:00.000Z",
+        "endAt": "2026-06-27T03:00:00.000Z",
+        "status": "IN_USE",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T14:06:01.573Z",
+        "updatedAt": "2026-06-25T14:43:41.770Z"
+      },
+      "afterValue": {
+        "id": 6,
+        "userId": 1,
+        "seatId": 15,
+        "startAt": "2026-06-27T01:00:00.000Z",
+        "endAt": "2026-06-27T03:00:00.000Z",
+        "status": "TEMP_LEAVE",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T14:06:01.573Z",
+        "updatedAt": "2026-06-25T14:43:43.651Z",
+        "leaveStartedAt": "2026-06-25T14:43:43.651Z"
+      },
+      "createdAt": "2026-06-25T14:43:43.651Z"
+    },
+    {
+      "id": 27,
+      "operatorId": 1,
+      "action": "FINISH",
+      "targetType": "booking_order",
+      "targetId": 6,
+      "beforeValue": {
+        "id": 6,
+        "userId": 1,
+        "seatId": 15,
+        "startAt": "2026-06-27T01:00:00.000Z",
+        "endAt": "2026-06-27T03:00:00.000Z",
+        "status": "TEMP_LEAVE",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T14:06:01.573Z",
+        "updatedAt": "2026-06-25T14:43:43.651Z",
+        "leaveStartedAt": "2026-06-25T14:43:43.651Z"
+      },
+      "afterValue": {
+        "id": 6,
+        "userId": 1,
+        "seatId": 15,
+        "startAt": "2026-06-27T01:00:00.000Z",
+        "endAt": "2026-06-27T03:00:00.000Z",
+        "status": "COMPLETED",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T14:06:01.573Z",
+        "updatedAt": "2026-06-25T14:43:44.041Z",
+        "leaveStartedAt": "2026-06-25T14:43:43.651Z"
+      },
+      "createdAt": "2026-06-25T14:43:44.041Z"
+    },
+    {
+      "id": 28,
+      "operatorId": 1,
+      "action": "TEMP_LEAVE",
+      "targetType": "booking_order",
+      "targetId": 2,
+      "beforeValue": {
+        "id": 2,
+        "userId": 1,
+        "seatId": 4,
+        "startAt": "2026-06-26T01:00:00.000Z",
+        "endAt": "2026-06-26T03:00:00.000Z",
+        "status": "IN_USE",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T13:55:19.463Z",
+        "updatedAt": "2026-06-25T14:06:08.128Z"
+      },
+      "afterValue": {
+        "id": 2,
+        "userId": 1,
+        "seatId": 4,
+        "startAt": "2026-06-26T01:00:00.000Z",
+        "endAt": "2026-06-26T03:00:00.000Z",
+        "status": "TEMP_LEAVE",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T13:55:19.463Z",
+        "updatedAt": "2026-06-25T14:43:44.546Z",
+        "leaveStartedAt": "2026-06-25T14:43:44.546Z"
+      },
+      "createdAt": "2026-06-25T14:43:44.546Z"
+    },
+    {
+      "id": 29,
+      "operatorId": 1,
+      "action": "FINISH",
+      "targetType": "booking_order",
+      "targetId": 2,
+      "beforeValue": {
+        "id": 2,
+        "userId": 1,
+        "seatId": 4,
+        "startAt": "2026-06-26T01:00:00.000Z",
+        "endAt": "2026-06-26T03:00:00.000Z",
+        "status": "TEMP_LEAVE",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T13:55:19.463Z",
+        "updatedAt": "2026-06-25T14:43:44.546Z",
+        "leaveStartedAt": "2026-06-25T14:43:44.546Z"
+      },
+      "afterValue": {
+        "id": 2,
+        "userId": 1,
+        "seatId": 4,
+        "startAt": "2026-06-26T01:00:00.000Z",
+        "endAt": "2026-06-26T03:00:00.000Z",
+        "status": "COMPLETED",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T13:55:19.463Z",
+        "updatedAt": "2026-06-25T14:43:44.946Z",
+        "leaveStartedAt": "2026-06-25T14:43:44.546Z"
+      },
+      "createdAt": "2026-06-25T14:43:44.946Z"
+    },
+    {
+      "id": 30,
+      "operatorId": 3,
+      "action": "LOGIN",
+      "targetType": "sys_user",
+      "targetId": 3,
+      "beforeValue": null,
+      "afterValue": "登录成功",
+      "createdAt": "2026-06-25T14:43:56.707Z"
+    },
+    {
+      "id": 31,
+      "operatorId": 3,
+      "action": "CHECKIN",
+      "targetType": "booking_order",
+      "targetId": 3,
+      "beforeValue": {
+        "id": 3,
+        "userId": 3,
+        "seatId": 32,
+        "startAt": "2026-06-30T01:00:00.000Z",
+        "endAt": "2026-06-30T03:00:00.000Z",
+        "status": "PENDING_CHECKIN",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T13:55:45.354Z",
+        "updatedAt": "2026-06-25T13:55:45.354Z"
+      },
+      "afterValue": {
+        "id": 3,
+        "userId": 3,
+        "seatId": 32,
+        "startAt": "2026-06-30T01:00:00.000Z",
+        "endAt": "2026-06-30T03:00:00.000Z",
+        "status": "IN_USE",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T13:55:45.354Z",
+        "updatedAt": "2026-06-25T14:44:00.567Z"
+      },
+      "createdAt": "2026-06-25T14:44:00.567Z"
+    },
+    {
+      "id": 32,
+      "operatorId": 3,
+      "action": "TEMP_LEAVE",
+      "targetType": "booking_order",
+      "targetId": 3,
+      "beforeValue": {
+        "id": 3,
+        "userId": 3,
+        "seatId": 32,
+        "startAt": "2026-06-30T01:00:00.000Z",
+        "endAt": "2026-06-30T03:00:00.000Z",
+        "status": "IN_USE",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T13:55:45.354Z",
+        "updatedAt": "2026-06-25T14:44:00.567Z"
+      },
+      "afterValue": {
+        "id": 3,
+        "userId": 3,
+        "seatId": 32,
+        "startAt": "2026-06-30T01:00:00.000Z",
+        "endAt": "2026-06-30T03:00:00.000Z",
+        "status": "TEMP_LEAVE",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T13:55:45.354Z",
+        "updatedAt": "2026-06-25T14:44:00.897Z",
+        "leaveStartedAt": "2026-06-25T14:44:00.897Z"
+      },
+      "createdAt": "2026-06-25T14:44:00.897Z"
+    },
+    {
+      "id": 33,
+      "operatorId": 3,
+      "action": "FINISH",
+      "targetType": "booking_order",
+      "targetId": 3,
+      "beforeValue": {
+        "id": 3,
+        "userId": 3,
+        "seatId": 32,
+        "startAt": "2026-06-30T01:00:00.000Z",
+        "endAt": "2026-06-30T03:00:00.000Z",
+        "status": "TEMP_LEAVE",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T13:55:45.354Z",
+        "updatedAt": "2026-06-25T14:44:00.897Z",
+        "leaveStartedAt": "2026-06-25T14:44:00.897Z"
+      },
+      "afterValue": {
+        "id": 3,
+        "userId": 3,
+        "seatId": 32,
+        "startAt": "2026-06-30T01:00:00.000Z",
+        "endAt": "2026-06-30T03:00:00.000Z",
+        "status": "COMPLETED",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T13:55:45.354Z",
+        "updatedAt": "2026-06-25T14:44:01.314Z",
+        "leaveStartedAt": "2026-06-25T14:44:00.897Z"
+      },
+      "createdAt": "2026-06-25T14:44:01.314Z"
+    },
+    {
+      "id": 34,
+      "operatorId": 3,
+      "action": "UPDATE",
+      "targetType": "space_seat",
+      "targetId": 1,
+      "beforeValue": {
+        "id": 1,
+        "roomId": 1,
+        "seatNo": "A1-01",
+        "posX": 1,
+        "posY": 1,
+        "hasPower": false,
+        "status": "NORMAL",
+        "createdAt": "2026-06-25T13:54:38.425Z",
+        "updatedAt": "2026-06-25T13:54:38.425Z"
+      },
+      "afterValue": {
+        "id": 1,
+        "roomId": 1,
+        "seatNo": "A1-01",
+        "posX": 1,
+        "posY": 1,
+        "hasPower": false,
+        "status": "MAINTENANCE",
+        "createdAt": "2026-06-25T13:54:38.425Z",
+        "updatedAt": "2026-06-25T14:44:04.321Z"
+      },
+      "createdAt": "2026-06-25T14:44:04.321Z"
+    },
+    {
+      "id": 35,
+      "operatorId": 4,
+      "action": "LOGIN",
+      "targetType": "sys_user",
+      "targetId": 4,
+      "beforeValue": null,
+      "afterValue": "登录成功",
+      "createdAt": "2026-06-25T14:44:11.472Z"
+    },
+    {
+      "id": 36,
+      "operatorId": 4,
+      "action": "UPDATE",
+      "targetType": "booking_rule",
+      "targetId": 1,
+      "beforeValue": {
+        "advanceDays": 7,
+        "maxDurationHours": 4,
+        "graceMinutes": 15,
+        "dailyLimit": 3,
+        "tempLeaveMinutes": 30,
+        "violationThreshold": 3,
+        "restrictionDays": 7
+      },
+      "afterValue": {
+        "advanceDays": 7,
+        "maxDurationHours": 4,
+        "graceMinutes": 15,
+        "dailyLimit": 1,
+        "tempLeaveMinutes": 30,
+        "violationThreshold": 3,
+        "restrictionDays": 7
+      },
+      "createdAt": "2026-06-25T14:44:20.738Z"
+    },
+    {
+      "id": 37,
+      "operatorId": 4,
+      "action": "CREATE",
+      "targetType": "booking_order",
+      "targetId": 7,
+      "beforeValue": null,
+      "afterValue": {
+        "id": 7,
+        "userId": 4,
+        "seatId": 2,
+        "startAt": "2026-06-26T01:00:00.000Z",
+        "endAt": "2026-06-26T03:00:00.000Z",
+        "status": "PENDING_CHECKIN",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T14:44:23.650Z",
+        "updatedAt": "2026-06-25T14:44:23.650Z"
+      },
+      "createdAt": "2026-06-25T14:44:23.650Z"
+    },
+    {
+      "id": 38,
+      "operatorId": 4,
+      "action": "CHECKIN",
+      "targetType": "booking_order",
+      "targetId": 7,
+      "beforeValue": {
+        "id": 7,
+        "userId": 4,
+        "seatId": 2,
+        "startAt": "2026-06-26T01:00:00.000Z",
+        "endAt": "2026-06-26T03:00:00.000Z",
+        "status": "PENDING_CHECKIN",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T14:44:23.650Z",
+        "updatedAt": "2026-06-25T14:44:23.650Z"
+      },
+      "afterValue": {
+        "id": 7,
+        "userId": 4,
+        "seatId": 2,
+        "startAt": "2026-06-26T01:00:00.000Z",
+        "endAt": "2026-06-26T03:00:00.000Z",
+        "status": "IN_USE",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T14:44:23.650Z",
+        "updatedAt": "2026-06-25T14:44:28.827Z"
+      },
+      "createdAt": "2026-06-25T14:44:28.827Z"
+    },
+    {
+      "id": 39,
+      "operatorId": 4,
+      "action": "TEMP_LEAVE",
+      "targetType": "booking_order",
+      "targetId": 7,
+      "beforeValue": {
+        "id": 7,
+        "userId": 4,
+        "seatId": 2,
+        "startAt": "2026-06-26T01:00:00.000Z",
+        "endAt": "2026-06-26T03:00:00.000Z",
+        "status": "IN_USE",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T14:44:23.650Z",
+        "updatedAt": "2026-06-25T14:44:28.827Z"
+      },
+      "afterValue": {
+        "id": 7,
+        "userId": 4,
+        "seatId": 2,
+        "startAt": "2026-06-26T01:00:00.000Z",
+        "endAt": "2026-06-26T03:00:00.000Z",
+        "status": "TEMP_LEAVE",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T14:44:23.650Z",
+        "updatedAt": "2026-06-25T14:44:29.173Z",
+        "leaveStartedAt": "2026-06-25T14:44:29.173Z"
+      },
+      "createdAt": "2026-06-25T14:44:29.173Z"
+    },
+    {
+      "id": 40,
+      "operatorId": 4,
+      "action": "FINISH",
+      "targetType": "booking_order",
+      "targetId": 7,
+      "beforeValue": {
+        "id": 7,
+        "userId": 4,
+        "seatId": 2,
+        "startAt": "2026-06-26T01:00:00.000Z",
+        "endAt": "2026-06-26T03:00:00.000Z",
+        "status": "TEMP_LEAVE",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T14:44:23.650Z",
+        "updatedAt": "2026-06-25T14:44:29.173Z",
+        "leaveStartedAt": "2026-06-25T14:44:29.173Z"
+      },
+      "afterValue": {
+        "id": 7,
+        "userId": 4,
+        "seatId": 2,
+        "startAt": "2026-06-26T01:00:00.000Z",
+        "endAt": "2026-06-26T03:00:00.000Z",
+        "status": "COMPLETED",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T14:44:23.650Z",
+        "updatedAt": "2026-06-25T14:44:29.616Z",
+        "leaveStartedAt": "2026-06-25T14:44:29.173Z"
+      },
+      "createdAt": "2026-06-25T14:44:29.616Z"
+    },
+    {
+      "id": 41,
+      "operatorId": 1,
+      "action": "LOGIN",
+      "targetType": "sys_user",
+      "targetId": 1,
+      "beforeValue": null,
+      "afterValue": "登录成功",
+      "createdAt": "2026-06-25T14:46:02.309Z"
+    },
+    {
+      "id": 42,
+      "operatorId": 1,
+      "action": "CREATE",
+      "targetType": "booking_order",
+      "targetId": 8,
+      "beforeValue": null,
+      "afterValue": {
+        "id": 8,
+        "userId": 1,
+        "seatId": 2,
+        "startAt": "2026-06-26T01:00:00.000Z",
+        "endAt": "2026-06-26T03:00:00.000Z",
+        "status": "PENDING_CHECKIN",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T14:46:04.375Z",
+        "updatedAt": "2026-06-25T14:46:04.375Z"
+      },
+      "createdAt": "2026-06-25T14:46:04.375Z"
+    },
+    {
+      "id": 43,
+      "operatorId": 1,
+      "action": "CHECKIN",
+      "targetType": "booking_order",
+      "targetId": 8,
+      "beforeValue": {
+        "id": 8,
+        "userId": 1,
+        "seatId": 2,
+        "startAt": "2026-06-26T01:00:00.000Z",
+        "endAt": "2026-06-26T03:00:00.000Z",
+        "status": "PENDING_CHECKIN",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T14:46:04.375Z",
+        "updatedAt": "2026-06-25T14:46:04.375Z"
+      },
+      "afterValue": {
+        "id": 8,
+        "userId": 1,
+        "seatId": 2,
+        "startAt": "2026-06-26T01:00:00.000Z",
+        "endAt": "2026-06-26T03:00:00.000Z",
+        "status": "IN_USE",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T14:46:04.375Z",
+        "updatedAt": "2026-06-25T14:46:06.876Z"
+      },
+      "createdAt": "2026-06-25T14:46:06.876Z"
+    },
+    {
+      "id": 44,
+      "operatorId": 1,
+      "action": "TEMP_LEAVE",
+      "targetType": "booking_order",
+      "targetId": 8,
+      "beforeValue": {
+        "id": 8,
+        "userId": 1,
+        "seatId": 2,
+        "startAt": "2026-06-26T01:00:00.000Z",
+        "endAt": "2026-06-26T03:00:00.000Z",
+        "status": "IN_USE",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T14:46:04.375Z",
+        "updatedAt": "2026-06-25T14:46:06.876Z"
+      },
+      "afterValue": {
+        "id": 8,
+        "userId": 1,
+        "seatId": 2,
+        "startAt": "2026-06-26T01:00:00.000Z",
+        "endAt": "2026-06-26T03:00:00.000Z",
+        "status": "TEMP_LEAVE",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T14:46:04.375Z",
+        "updatedAt": "2026-06-25T14:46:07.734Z",
+        "leaveStartedAt": "2026-06-25T14:46:07.734Z"
+      },
+      "createdAt": "2026-06-25T14:46:07.734Z"
+    },
+    {
+      "id": 45,
+      "operatorId": 1,
+      "action": "FINISH",
+      "targetType": "booking_order",
+      "targetId": 8,
+      "beforeValue": {
+        "id": 8,
+        "userId": 1,
+        "seatId": 2,
+        "startAt": "2026-06-26T01:00:00.000Z",
+        "endAt": "2026-06-26T03:00:00.000Z",
+        "status": "TEMP_LEAVE",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T14:46:04.375Z",
+        "updatedAt": "2026-06-25T14:46:07.734Z",
+        "leaveStartedAt": "2026-06-25T14:46:07.734Z"
+      },
+      "afterValue": {
+        "id": 8,
+        "userId": 1,
+        "seatId": 2,
+        "startAt": "2026-06-26T01:00:00.000Z",
+        "endAt": "2026-06-26T03:00:00.000Z",
+        "status": "COMPLETED",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T14:46:04.375Z",
+        "updatedAt": "2026-06-25T14:46:11.214Z",
+        "leaveStartedAt": "2026-06-25T14:46:07.734Z"
+      },
+      "createdAt": "2026-06-25T14:46:11.214Z"
+    },
+    {
+      "id": 46,
+      "operatorId": 1,
+      "action": "CREATE",
+      "targetType": "booking_order",
+      "targetId": 9,
+      "beforeValue": null,
+      "afterValue": {
+        "id": 9,
+        "userId": 1,
+        "seatId": 8,
+        "startAt": "2026-06-27T01:00:00.000Z",
+        "endAt": "2026-06-27T03:00:00.000Z",
+        "status": "PENDING_CHECKIN",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T14:46:20.704Z",
+        "updatedAt": "2026-06-25T14:46:20.704Z"
+      },
+      "createdAt": "2026-06-25T14:46:20.704Z"
+    },
+    {
+      "id": 47,
+      "operatorId": 2,
+      "action": "LOGIN",
+      "targetType": "sys_user",
+      "targetId": 2,
+      "beforeValue": null,
+      "afterValue": "登录成功",
+      "createdAt": "2026-06-25T14:46:26.939Z"
+    },
+    {
+      "id": 48,
+      "operatorId": 2,
+      "action": "CREATE",
+      "targetType": "booking_order",
+      "targetId": 10,
+      "beforeValue": null,
+      "afterValue": {
+        "id": 10,
+        "userId": 2,
+        "seatId": 9,
+        "startAt": "2026-06-27T01:00:00.000Z",
+        "endAt": "2026-06-27T03:00:00.000Z",
+        "status": "PENDING_CHECKIN",
+        "cancelReason": "",
+        "createdAt": "2026-06-25T14:46:30.362Z",
+        "updatedAt": "2026-06-25T14:46:30.362Z"
+      },
+      "createdAt": "2026-06-25T14:46:30.362Z"
+    },
+    {
+      "id": 49,
+      "operatorId": 3,
+      "action": "LOGIN",
+      "targetType": "sys_user",
+      "targetId": 3,
+      "beforeValue": null,
+      "afterValue": "登录成功",
+      "createdAt": "2026-06-25T14:46:33.118Z"
+    },
+    {
+      "id": 50,
+      "operatorId": 3,
+      "action": "UPDATE",
+      "targetType": "space_seat",
+      "targetId": 9,
+      "beforeValue": {
+        "id": 9,
+        "roomId": 1,
+        "seatNo": "A2-03",
+        "posX": 3,
+        "posY": 2,
+        "hasPower": false,
+        "status": "NORMAL",
+        "createdAt": "2026-06-25T13:54:38.425Z",
+        "updatedAt": "2026-06-25T13:54:38.425Z"
+      },
+      "afterValue": {
+        "id": 9,
+        "roomId": 1,
+        "seatNo": "A2-03",
+        "posX": 3,
+        "posY": 2,
+        "hasPower": false,
+        "status": "MAINTENANCE",
+        "createdAt": "2026-06-25T13:54:38.425Z",
+        "updatedAt": "2026-06-25T14:46:49.716Z"
+      },
+      "createdAt": "2026-06-25T14:46:49.716Z"
+    },
+    {
+      "id": 51,
+      "operatorId": 3,
+      "action": "UPDATE",
+      "targetType": "space_seat",
+      "targetId": 8,
+      "beforeValue": {
+        "id": 8,
+        "roomId": 1,
+        "seatNo": "A2-02",
+        "posX": 2,
+        "posY": 2,
+        "hasPower": true,
+        "status": "NORMAL",
+        "createdAt": "2026-06-25T13:54:38.425Z",
+        "updatedAt": "2026-06-25T13:54:38.425Z"
+      },
+      "afterValue": {
+        "id": 8,
+        "roomId": 1,
+        "seatNo": "A2-02",
+        "posX": 2,
+        "posY": 2,
+        "hasPower": true,
+        "status": "NORMAL",
+        "createdAt": "2026-06-25T13:54:38.425Z",
+        "updatedAt": "2026-06-25T14:46:50.064Z"
+      },
+      "createdAt": "2026-06-25T14:46:50.064Z"
+    },
+    {
+      "id": 52,
+      "operatorId": 4,
+      "action": "LOGIN",
+      "targetType": "sys_user",
+      "targetId": 4,
+      "beforeValue": null,
+      "afterValue": "登录成功",
+      "createdAt": "2026-06-25T14:46:57.601Z"
+    }
+  ],
+  "seatStatusLogs": [],
+  "rule": {
+    "advanceDays": 7,
+    "maxDurationHours": 4,
+    "graceMinutes": 15,
+    "dailyLimit": 1,
+    "tempLeaveMinutes": 30,
+    "violationThreshold": 3,
+    "restrictionDays": 7
+  }
+}
